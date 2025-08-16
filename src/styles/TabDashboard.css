@@ -1,0 +1,594 @@
+/* Dashboard.css */
+.dashboard-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f7;
+  /* padding: 20px; */
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Navigation Tabs */
+.tabs-container {
+  display: flex;
+  gap: 10px;
+
+}
+
+.tab {
+  padding: 8px 24px 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  background: #f5f5f7;
+  font-size: 15px;
+  color: #666;
+  font-weight: 500;
+  border-radius: 16px 16px 0 0;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  z-index: 1;
+}
+
+.tab.active {
+  background: #fff;
+  color: #5b46e9;
+  font-weight: 600;
+  /* border: 1px solid #e0e0e0; */
+  /* border-bottom: 1.5px solid #fff; */
+  z-index: 2;
+}
+
+/* Metrics Section */
+.metrics-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.metrics-scroll-area {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 4px;
+  width: 100%;
+  scrollbar-width: none;
+  /* Firefox */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.metrics-scroll-area::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Edge */
+}
+
+.metric-card {
+  background-color: #f5f5f7;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.icon-container {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.metric-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.change-indicator {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.change-indicator.positive {
+  color: #4caf50;
+}
+
+.change-indicator.negative {
+  color: #f44336;
+}
+
+.period {
+  color: #999;
+}
+
+.scroll-button {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.scroll-button.left {
+  left: -7px;
+}
+
+.scroll-button.right {
+  right: -7px;
+}
+
+/* Main Grid */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+}
+
+
+.tabs-outer-container {
+  width: 100%;
+  background: #f5f5f7;
+  padding: 0 0 30px 0;
+}
+
+.tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: none;
+  background: #f5f5f7;
+  position: relative;
+  z-index: 3;
+}
+
+.tab {
+  background: #f5f5f7;
+  color: #666;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid #e0e0e0;
+  border-bottom: none;
+  border-radius: 14px 14px 0 0;
+  padding: 10px 24px 12px 20px;
+  margin-bottom: -1px;
+  position: relative;
+  transition: all .13s;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.tab.active {
+  background: #fff;
+  color: #5b46e9;
+  font-weight: 600;
+  border: 1.5px solid #e0e0e0;
+  border-bottom: 1.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  z-index: 2;
+}
+
+/* Panel sits under the joins and gets only panel border except top */
+.tab-panel {
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid #e0e0e0;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  min-height: 120px;
+}
+
+/* your other dashboard styles below remain unchanged */
+
+
+
+
+
+
+.metric-card {
+  background: #fff;
+  border: 1px solid #e5e8eb;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(68, 68, 68, 0.06);
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 0 14px 20px 0;
+  overflow: hidden;
+  min-width: 235px;
+}
+
+.metric-card-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 22px 8px 22px;
+  background: #f7f9fa;
+}
+
+.metric-icon-gradient {
+  background: linear-gradient(135deg, #f5576c 0, #f093fb 100%);
+  border-radius: 12px;
+  padding: 2px;
+  display: inline-flex;
+}
+
+.metric-icon-inner {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 48px;
+  height: 48px;
+}
+
+.metric-icon-emoji {
+  font-size: 26px;
+}
+
+.metric-title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #475569;
+}
+
+.metric-value {
+  font-size: 22px;
+  color: #151b28;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.metric-divider {
+  height: 1px;
+  background: #ececec;
+  width: 100%;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.metric-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 25px;
+  padding: 14px 22px 16px 22px;
+}
+
+.metric-change {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.metric-change.negative {
+  color: #f5576c;
+}
+
+.metric-change.positive {
+  color: #22c55e;
+}
+
+.arrow {
+  font-size: 17px;
+  margin-right: 2.5px;
+  vertical-align: middle;
+}
+
+.metric-period {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  gap: 19px; 
+}
+
+
+
+
+
+/* Order Status Section */
+.order-status-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-button,
+.year-button {
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.status-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.status-box {
+  padding: 15px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.status-box:nth-child(3n) {
+  border-right: none;
+}
+
+.status-box:nth-child(4),
+.status-box:nth-child(5),
+.status-box:nth-child(6) {
+  border-bottom: none;
+}
+
+.status-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.status-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.status-value {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-center-value {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Activities Section */
+.activities-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-button {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+}
+
+.tab-button.active {
+  background-color: #f0f0f0;
+  border: 1px solid #f0f0f0;
+}
+
+.activities-list {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-section {
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.activity-event {
+  margin-bottom: 16px;
+}
+
+.event-main {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.event-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-text {
+  font-size: 14px;
+}
+
+.person-name {
+  color: #5b46e9;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.event-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.event-reply {
+  display: flex;
+  margin-left: 40px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.reply-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.reply-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.reply-text {
+  font-size: 13px;
+}
+
+.reply-time {
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* Responsive for small screens */
+@media (max-width: 1100px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-container,
+  .donut-chart {
+    justify-content: flex-start !important;
+    margin-top: 18px;
+  }
+
+  .order-status-section,
+  .activities-section {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard-container {
+    padding: 8px;
+  }
+
+  .metrics-scroll-area {
+    padding: 2px 0;
+    gap: 8px;
+  }
+
+  .metric-card {
+    min-width: 160px;
+    padding: 14px;
+  }
+
+  .donut-chart {
+    width: 140px;
+    height: 140px;
+  }
+
+  .section-header,
+  .activities-section .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 5px;
+}
